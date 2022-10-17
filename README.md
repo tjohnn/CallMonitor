@@ -9,4 +9,4 @@ An android app that monitor your calls, saves the caller phone number and the na
 | Log  | Returns the list of logged calls from the time the server is started | `/log`  |  GET  |  200 - `[{"startTime": "Sun Oct 16 14:43:47 PDT 2022","durationInSeconds": 20,"phoneNumber": "014889389892","callerName": "John Doe","timesQueried": 1}` | 400 -  `{"message": "Something went wrong"}`  |
 
 ## Screenshots
-<img src="screenshots/home_start_server.png" width="100" alt="Start Server"> <img src="screenshots/home_stop_server.png" width="100" alt="Stop Server"> <img src="screenshots/call_logs.png" width="100" alt="Call Logs">
+<img src="screenshots/home_start_server.png" width="200" alt="Start Server"> <img src="screenshots/home_stop_server.png" width="200" alt="Stop Server"> <img src="screenshots/call_logs.png" width="200" alt="Call Logs">
