@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">CallMonitor</string>
+    <string name="server_information_title">Server Information</string>
+    <string name="server_ip_address_label">IP Address</string>
+    <string name="server_port_label">Port</string>
+    <string name="start_server_label">Start Server</string>
+    <string name="stop_server_label">Stop Server</string>
+    <string name="view_call_logs_label">View Call Logs</string>
+    <string name="call_logs_title">Call Logs</string>
+    <string name="call_monitor_server_title">Call Monitor</string>
+    <string name="foreground_notification_title">Call logs server</string>
+    <string name="foreground_notification_subtitle">Running on %1$s</string>
+    <string name="unknown_caller_name">Unknown</string>
+    <string name="call_duration_seconds_text">%1$d secs</string>
+    <string name="generic_error_message">Something went wrong.</string>
+    <string name="permission_error_message">Please grant all the required permissions in the app settings in order to monitor your calls.</string>
+    <string name="unavailable_port_message">"Please free port %1$d on this network before starting the server".</string>
+</resources>

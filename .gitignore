@@ -1,0 +1,21 @@
+*.iml
+**/.gradle
+/local.properties
+.idea/*
+.DS_Store
+**/.DS_Store
+**/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+**/*.apk
+*.ap_
+*.dex
+*.class
+
+# Generated files
+bin/
+gen/
+out/
