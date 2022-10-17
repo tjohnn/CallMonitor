@@ -21,21 +21,19 @@ class HomePage {
         onView(withId(R.id.start_server_button))
             .check(matches(isDisplayed()))
             .perform(click())
-        return HomePage()
+        return this
     }
 
     fun assertServerStarted(): HomePage {
-        val context = InstrumentationRegistry.getInstrumentation().targetContext
         onView(withText(R.string.stop_server_label))
             .check(matches(isDisplayed()))
-        return HomePage()
+        return this
     }
 
     fun assertServerStopped(): HomePage {
-        val context = InstrumentationRegistry.getInstrumentation().targetContext
         onView(withText(R.string.start_server_label))
             .check(matches(isDisplayed()))
-        return HomePage()
+        return this
     }
 
     fun navigateToCallLogs(): CallLogsPage {
