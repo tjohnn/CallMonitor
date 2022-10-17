@@ -59,7 +59,7 @@ class CallLogsServerService : Service() {
     @Inject
     lateinit var dispatcher: Dispatcher
 
-    val server by lazy { embeddedServer(CIO, SERVER_PORT) { setupServer(apiController) } }
+    private val server by lazy { embeddedServer(CIO, SERVER_PORT) { setupServer(apiController) } }
 
     private val callBroadcastReceiver by lazy {
         val callback = object : CallStateChangeCallback {

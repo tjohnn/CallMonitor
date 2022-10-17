@@ -2,9 +2,9 @@ package com.tjohnn.callmonitor.domain.call
 
 import com.nhaarman.mockitokotlin2.verify
 import com.tjohnn.callmonitor.date1
+import com.tjohnn.callmonitor.dispatcher.testDispatcher
 import com.tjohnn.callmonitor.domain.call.model.SaveCallStartedRequest
 import com.tjohnn.callmonitor.domain.call.repository.SaveCallStartedRepository
-import com.tjohnn.callmonitor.testDispatcher
 import kotlinx.coroutines.runBlocking
 import org.junit.Before
 import org.junit.Test

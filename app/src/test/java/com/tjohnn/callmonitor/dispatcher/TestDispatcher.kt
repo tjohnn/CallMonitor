@@ -1,4 +1,4 @@
-package com.tjohnn.callmonitor
+package com.tjohnn.callmonitor.dispatcher
 
 import com.tjohnn.callmonitor.domain.dispatcher.Dispatcher
 import kotlinx.coroutines.test.StandardTestDispatcher

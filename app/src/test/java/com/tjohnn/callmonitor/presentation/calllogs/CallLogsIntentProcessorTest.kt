@@ -41,6 +41,7 @@ class CallLogsIntentProcessorTest {
             val actualResult = mutableListOf<CallLogsViewResult>()
             classUnderTest.intentToResult(intent).toList(actualResult)
 
+            // Then
             assertEquals(expectedResult, actualResult)
         }
     }
@@ -59,6 +60,7 @@ class CallLogsIntentProcessorTest {
             val actualResult = mutableListOf<CallLogsViewResult>()
             classUnderTest.intentToResult(intent).toList(actualResult)
 
+            // Then
             assertEquals(expectedResult, actualResult)
         }
     }

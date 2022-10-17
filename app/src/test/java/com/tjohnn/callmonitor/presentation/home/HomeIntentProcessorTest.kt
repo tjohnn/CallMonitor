@@ -53,6 +53,7 @@ class HomeIntentProcessorTest {
             val actualResult = mutableListOf<HomeViewResult>()
             classUnderTest.intentToResult(intent).toList(actualResult)
 
+            // Then
             assertEquals(expectedResult, actualResult)
         }
     }
@@ -71,6 +72,7 @@ class HomeIntentProcessorTest {
             val actualResult = mutableListOf<HomeViewResult>()
             classUnderTest.intentToResult(intent).toList(actualResult)
 
+            // Then
             assertEquals(expectedResult, actualResult)
         }
     }
@@ -86,6 +88,7 @@ class HomeIntentProcessorTest {
             val actualResult = mutableListOf<HomeViewResult>()
             classUnderTest.intentToResult(intent).toList(actualResult)
 
+            // Then
             assertEquals(expectedResult, actualResult)
         }
     }
@@ -101,6 +104,7 @@ class HomeIntentProcessorTest {
             val actualResult = mutableListOf<HomeViewResult>()
             classUnderTest.intentToResult(intent).toList(actualResult)
 
+            // Then
             assertEquals(expectedResult, actualResult)
         }
     }
@@ -116,6 +120,7 @@ class HomeIntentProcessorTest {
             val actualResult = mutableListOf<HomeViewResult>()
             classUnderTest.intentToResult(intent).toList(actualResult)
 
+            // Then
             assertEquals(expectedResult, actualResult)
         }
     }

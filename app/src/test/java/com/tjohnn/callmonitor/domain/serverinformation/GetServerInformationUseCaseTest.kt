@@ -1,8 +1,8 @@
 package com.tjohnn.callmonitor.domain.serverinformation
 
 import com.nhaarman.mockitokotlin2.given
+import com.tjohnn.callmonitor.dispatcher.testDispatcher
 import com.tjohnn.callmonitor.serverInformation
-import com.tjohnn.callmonitor.testDispatcher
 import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.runBlocking
 import org.junit.Assert.assertEquals

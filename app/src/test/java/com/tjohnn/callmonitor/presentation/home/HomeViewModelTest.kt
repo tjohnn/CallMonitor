@@ -61,6 +61,7 @@ class HomeViewModelTest {
             classUnderTest.processIntent(intent)
             val actualResult = classUnderTest.viewState.first()
 
+            // Then
             assertEquals(expectedViewStates.last(), actualResult)
         }
     }
