@@ -19,7 +19,7 @@ class StartStopServerTest {
     private val activityTestRule = ActivityScenarioRule(MainActivity::class.java)
 
     @get:Rule
-    var ruleChain: RuleChain = RuleChain.outerRule(
+    val ruleChain: RuleChain = RuleChain.outerRule(
         GrantPermissionRule.grant(
             Manifest.permission.READ_CALL_LOG,
             Manifest.permission.READ_PHONE_STATE,
