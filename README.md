@@ -1,5 +1,5 @@
 # Call Monitor
-An android app that monitor your calls, saves the caller phone number and the name and exposes an api server to query the call logs. Calls are logged only while the server is running.
+An android app that monitors your calls, saves the caller phone number and the name and exposes an api server to query the call logs. Calls are logged only while the server is running.
 
 ## API
 | Name  | Description | Path | Verb | Response | Failure |
