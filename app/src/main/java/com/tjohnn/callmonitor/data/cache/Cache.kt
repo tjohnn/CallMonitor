@@ -10,13 +10,13 @@ class Cache<Model> {
     val flow: Flow<Model> get() = _flow
     private val mutex = Mutex()
 
-    suspend fun emit(value: Model) {
+    suspend fun save(value: Model) {
         mutex.withLock {
             _flow.emit(value)
         }
     }
 
-    suspend fun emitIfEmpty(value: Model) {
+    suspend fun saveIfEmpty(value: Model) {
         mutex.withLock {
             if (_flow.replayCache.isEmpty()) {
                 _flow.emit(value)

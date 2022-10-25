@@ -12,7 +12,7 @@ class CallLogsDataSource(
     private val callLogRequestMapper: CallLogRequestMapper
 ) {
     suspend fun get(): Flow<Collection<CallLogDataModel>> {
-        callLogsCache.emitIfEmpty(emptyList())
+        callLogsCache.saveIfEmpty(emptyList())
         return callLogsCache.flow
     }
 
@@ -20,11 +20,11 @@ class CallLogsDataSource(
         val call = callLogRequestMapper.map(request)
         val newLogList = get().first().mapTo(mutableListOf()) { it }
             .apply { add(call) }
-        callLogsCache.emit(newLogList)
+        callLogsCache.save(newLogList)
     }
 
     suspend fun incrementQueryCounts() {
         val newLogList = get().first().mapTo(mutableListOf()) { it.copy(timesQueried = it.timesQueried + 1) }
-        callLogsCache.emit(newLogList)
+        callLogsCache.save(newLogList)
     }
 }

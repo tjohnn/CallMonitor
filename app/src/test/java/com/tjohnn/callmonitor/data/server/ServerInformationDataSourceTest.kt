@@ -60,7 +60,7 @@ class ServerInformationDataSourceTest {
             val actualResult = classUnderTest.get()
 
             // Then
-            verify(serverInformationCache).emitIfEmpty(initialServerInformation)
+            verify(serverInformationCache).saveIfEmpty(initialServerInformation)
             assertEquals(expectedResult, actualResult)
         }
     }
@@ -89,7 +89,7 @@ class ServerInformationDataSourceTest {
             classUnderTest.updateServerRunningState(true)
 
             // Then
-            verify(serverInformationCache).emit(newServerInformation)
+            verify(serverInformationCache).save(newServerInformation)
         }
     }
 
@@ -116,7 +116,7 @@ class ServerInformationDataSourceTest {
             classUnderTest.updateServerRunningState(false)
 
             // Then
-            verify(serverInformationCache).emit(initialServerInformation)
+            verify(serverInformationCache).save(initialServerInformation)
         }
     }
 }

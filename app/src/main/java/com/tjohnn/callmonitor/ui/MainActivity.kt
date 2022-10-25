@@ -11,9 +11,6 @@ import javax.inject.Inject
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity(), UpNavigationCallBack {
 
-    @Inject
-    lateinit var localIpAddressFacade: LocalIpAddressFacade
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)

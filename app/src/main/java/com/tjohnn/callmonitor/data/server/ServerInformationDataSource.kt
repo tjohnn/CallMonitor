@@ -14,7 +14,7 @@ class ServerInformationDataSource(
     private val timeProvider: TimeProvider
 ) {
     suspend fun get(): Flow<ServerInformationDataModel> {
-        serverInformationCache.emitIfEmpty(
+        serverInformationCache.saveIfEmpty(
             ServerInformationDataModel(
                 ipAddress = localIpAddressFacade.getSystemLocalIpAddress() ?: throw LocalIpAddressException(),
                 port = SERVER_PORT,
@@ -35,6 +35,6 @@ class ServerInformationDataSource(
             isRunning = isServerRunning,
             timeStarted = timeStarted
         )
-        serverInformationCache.emit(newServerInfo)
+        serverInformationCache.save(newServerInfo)
     }
 }

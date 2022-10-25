@@ -11,16 +11,16 @@ class OngoingCallDataSource(
     private val ongoingCallRequestMapper: OngoingCallRequestMapper
 ) {
     suspend fun get(): Flow<OngoingCallDataModel> {
-        ongoingCallCache.emitIfEmpty(OngoingCallDataModel.None)
+        ongoingCallCache.saveIfEmpty(OngoingCallDataModel.None)
         return ongoingCallCache.flow
     }
 
     suspend fun saveOngoingCall(request: SaveCallStartedRequest) {
         val ongoingCall = ongoingCallRequestMapper.map(request)
-        ongoingCallCache.emit(ongoingCall)
+        ongoingCallCache.save(ongoingCall)
     }
 
     suspend fun reset() {
-        ongoingCallCache.emit(OngoingCallDataModel.None)
+        ongoingCallCache.save(OngoingCallDataModel.None)
     }
 }
